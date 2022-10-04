@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { EditarTarefaComponent } from './editar-tarefa.component';
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
 describe('EditarTarefaComponent', () => {
   let component: EditarTarefaComponent;
@@ -8,7 +10,8 @@ describe('EditarTarefaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ EditarTarefaComponent ]
+      declarations: [ EditarTarefaComponent ],
+      imports: [RouterTestingModule, HttpClientTestingModule]
     })
     .compileComponents();
 
